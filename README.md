@@ -1,13 +1,31 @@
-# Sample Hardhat Project
+## ERC-20 Token
+This repository contains the implementation of an ERC-20 token created both manually and using OpenZeppelin's ERC20 contract.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+# Manual ERC-20 Token
+# Features
+1. Customizable Token: Manually created ERC-20 token for a personalized configuration.
+2. Solidity Implementation: Token smart contract implemented in Solidity, providing full control over contract features.
 
-Try running some of the following tasks:
-
+# Getting Started
+1. Clone the Repository:
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+git clone https://github.com/your-username/manual-erc20-token.git
 ```
+2. Install Dependencies: 
+```shell
+cd manual-erc20-token
+npm install
+```
+3. Compile and Deploy: 
+```shell
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network [your-network]
+```
+
+# Explore and Customize
+Explore the respective folders for detailed instructions and customize the token as per your requirements.
+
+Feel free to contribute and provide feedback!
+
+# License
+This project is licensed under the MIT License.

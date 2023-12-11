@@ -9,3 +9,4 @@ contract GiriToken  is ERC20 {
   }
 
 }
+// sepolia contract address :  0xfEefC998fc9846c04B5CC9811f42dAFB3D24a90c

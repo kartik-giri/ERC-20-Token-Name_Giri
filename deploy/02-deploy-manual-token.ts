@@ -11,23 +11,24 @@ const deployToken: DeployFunction = async function (
   const { deploy, log } = deployments
   const { deployer } = await getNamedAccounts()
   const chainId: number = network.config.chainId!
-
-  const GiriToken = await deploy("GiriToken", {
+  const tokenName = "GIRITOKEN";
+  const tokenSymbol = "GIRIMANUAL";
+  const ManualToken  = await deploy("ManualToken", {
     from: deployer,
-    args: [INITIAL_SUPPLY],
+    args: [INITIAL_SUPPLY,tokenName, tokenSymbol],
     log: true,
     // we need to wait if on a live network so we can verify properly
     waitConfirmations: networkConfig[network.name].blockConfirmations || 1,
   })
-  log(`GiriToken deployed at ${GiriToken.address}`)
+  log(`ManualToken deployed at ${ManualToken.address}`)
 
   if (
     !developmentChains.includes(network.name) &&
     process.env.ETHERSCAN_API_KEY
   ) {
-    await verify(GiriToken.address, [INITIAL_SUPPLY], "contracts/GiriToken.sol:GiriToken")
+    await verify(ManualToken.address, [INITIAL_SUPPLY, tokenName, tokenSymbol], "contracts/ManualToken.sol:ManualToken")
   }
 }
 
 export default deployToken
-deployToken.tags = ["all", "erc"]
+deployToken.tags = ["all", "manual"]
