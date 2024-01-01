@@ -1,7 +1,7 @@
 # ERC-20 Token
 This repository contains the implementation of an ERC-20 token created both manually and using OpenZeppelin's ERC20 contract.
 
-## My learning
+## My learnings
 1. What is Token in ethereum.
 2. How to crete it manualy.
 3. What is OpenZeppelin.
